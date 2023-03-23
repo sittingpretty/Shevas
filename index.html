@@ -8,15 +8,24 @@
     <link rel="stylesheet" href="index.css">
     <link rel="icon" href="letter_s.jpg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-   
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
   </head>
   <body>
     <main>
         <h1>Sheva's Number Game</h1>  
         <div id="game">
-          <py-script src="number_game.py"title="Number Game"></py-script>
+          <py-script>
+            secret = 6
+            guess = int(input("Guess a number between 1 and 10!: "))
+            if guess == secret:
+              print("Correct!")
+            elif guess >= secret:
+              print("Too big")
+            elif guess <= secret:
+              print("Too small")  
+          </py-script>
         </div>
     </main>
   </body>
